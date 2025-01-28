@@ -1,0 +1,44 @@
+---
+title: "TestTwo"
+author: "Sofia"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+## Datos Turismo
+
+```
+
+```{r}
+#Buscando solo a Tasmania
+distinct(filter(tourism, State == "Tasmania"),Region)
+```
+
+```{r}
+# Buscando solo a Tasmania en la Costa Este
+tas_east <- filter(tourism, State == "Tasmania",Region == "East Coast")
+tas_east
+```
+
+```{r}
+summarise(group_by(as_tibble(tas_east), Purpose), media=mean(Trips))
+```
+
+```{r}
+autoplot(tas_east) + 
+facet_wrap(vars(Purpose), scale = "free_y") +
+theme(legend.position = "none")
+```
+
+```{r}
+tas_east
+```
+
+```{r}
+
+```
