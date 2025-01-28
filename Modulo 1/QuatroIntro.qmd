@@ -7,10 +7,12 @@ editor: visual
 
 ```{r}
 library(tidyverse)
+library(tourism)
 ```
 
 ```{r}
 ## Datos Turismo
+library(tourism)
 
 ```
 
